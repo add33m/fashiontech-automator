@@ -25,6 +25,11 @@ const blockLogout = (req, res, next) => {
   }
 }
 
+// Getting home page
+router.get("/", () => {
+  res.render("index");
+})
+
 // Handling login requests
 router.post("/login", blockLogin, (req, res) => {
   const { name, pass } = req.body;
